@@ -51,7 +51,7 @@ namespace IntermediarioPOO.Entities
             {
                 if (contract.Date.Year == year && contract.Date.Month == month)
                 {
-                    sum *= contract.totalValue();
+                    sum += contract.totalValue();
                 }
 
 

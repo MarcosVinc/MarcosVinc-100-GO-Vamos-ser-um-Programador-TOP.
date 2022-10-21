@@ -1,0 +1,14 @@
+C:\Users\Marcos Vinicius\source\repos\C# COMPLETO Programação Orientada a Objetos + Projetos\2 - Estudo Intermediario\IntermediarioPOO\bin\Debug\netcoreapp3.1\IntermediarioPOO.exe
+C:\Users\Marcos Vinicius\source\repos\C# COMPLETO Programação Orientada a Objetos + Projetos\2 - Estudo Intermediario\IntermediarioPOO\bin\Debug\netcoreapp3.1\IntermediarioPOO.deps.json
+C:\Users\Marcos Vinicius\source\repos\C# COMPLETO Programação Orientada a Objetos + Projetos\2 - Estudo Intermediario\IntermediarioPOO\bin\Debug\netcoreapp3.1\IntermediarioPOO.runtimeconfig.json
+C:\Users\Marcos Vinicius\source\repos\C# COMPLETO Programação Orientada a Objetos + Projetos\2 - Estudo Intermediario\IntermediarioPOO\bin\Debug\netcoreapp3.1\IntermediarioPOO.runtimeconfig.dev.json
+C:\Users\Marcos Vinicius\source\repos\C# COMPLETO Programação Orientada a Objetos + Projetos\2 - Estudo Intermediario\IntermediarioPOO\bin\Debug\netcoreapp3.1\IntermediarioPOO.dll
+C:\Users\Marcos Vinicius\source\repos\C# COMPLETO Programação Orientada a Objetos + Projetos\2 - Estudo Intermediario\IntermediarioPOO\bin\Debug\netcoreapp3.1\IntermediarioPOO.pdb
+C:\Users\Marcos Vinicius\source\repos\C# COMPLETO Programação Orientada a Objetos + Projetos\2 - Estudo Intermediario\IntermediarioPOO\obj\Debug\netcoreapp3.1\IntermediarioPOO.csproj.AssemblyReference.cache
+C:\Users\Marcos Vinicius\source\repos\C# COMPLETO Programação Orientada a Objetos + Projetos\2 - Estudo Intermediario\IntermediarioPOO\obj\Debug\netcoreapp3.1\IntermediarioPOO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Marcos Vinicius\source\repos\C# COMPLETO Programação Orientada a Objetos + Projetos\2 - Estudo Intermediario\IntermediarioPOO\obj\Debug\netcoreapp3.1\IntermediarioPOO.AssemblyInfoInputs.cache
+C:\Users\Marcos Vinicius\source\repos\C# COMPLETO Programação Orientada a Objetos + Projetos\2 - Estudo Intermediario\IntermediarioPOO\obj\Debug\netcoreapp3.1\IntermediarioPOO.AssemblyInfo.cs
+C:\Users\Marcos Vinicius\source\repos\C# COMPLETO Programação Orientada a Objetos + Projetos\2 - Estudo Intermediario\IntermediarioPOO\obj\Debug\netcoreapp3.1\IntermediarioPOO.csproj.CoreCompileInputs.cache
+C:\Users\Marcos Vinicius\source\repos\C# COMPLETO Programação Orientada a Objetos + Projetos\2 - Estudo Intermediario\IntermediarioPOO\obj\Debug\netcoreapp3.1\IntermediarioPOO.dll
+C:\Users\Marcos Vinicius\source\repos\C# COMPLETO Programação Orientada a Objetos + Projetos\2 - Estudo Intermediario\IntermediarioPOO\obj\Debug\netcoreapp3.1\IntermediarioPOO.pdb
+C:\Users\Marcos Vinicius\source\repos\C# COMPLETO Programação Orientada a Objetos + Projetos\2 - Estudo Intermediario\IntermediarioPOO\obj\Debug\netcoreapp3.1\IntermediarioPOO.genruntimeconfig.cache
