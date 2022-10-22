@@ -45,8 +45,12 @@ namespace IntermediarioPOO.Entities
 
         public double income(int year, int month)
         {
+            // A variavel sum "soma", recebe o salario base. Ja que o trabalhador 
+            // vai receber-lo mesmo sem ter feito contratos adicionais além do que
+            // esta em carteira.
             double sum = BaseSalary;
 
+            // Aqui faço um foreach para procurar um contrato, no meu objero Contracts
             foreach (HourContract contract in Contracts)
             {
                 if (contract.Date.Year == year && contract.Date.Month == month)

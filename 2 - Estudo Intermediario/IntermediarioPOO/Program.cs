@@ -89,5 +89,43 @@ namespace IntermediarioPOO
             Console.WriteLine("Income for " + monthAndYear + ": " + worker.income(year, month).ToString("F2", CultureInfo.InvariantCulture));
 
         }
+
+        public static void Aula03()
+        {
+            //Post and Comments exercicio 02
+
+
+            Post post;
+            Comment comment;
+
+            //Post
+            Console.Write("Digite o titulo do comentario:");
+            string title = Console.ReadLine();
+            Console.Write("Likes: ");
+            int likes = Convert.ToInt32(Console.ReadLine());
+
+            //Falta o data time 
+
+            Console.WriteLine(" -- Digite o Corpo do texto --");
+            Console.WriteLine();
+            string content = Console.ReadLine();
+
+            post = new Post();
+
+            Console.Write("Quantos comentarios vc quer fazer ao post acima ? ");
+            int n = Convert.ToInt32(Console.ReadLine());
+
+            for (int p = 1; p <= n; p++) 
+            { 
+               
+            }
+
+
+
+
+
+
+
+        }
     }
 }
