@@ -2,6 +2,7 @@
 using IntermediarioPOO.Entities.Enums;
 using System.Globalization;
 using System;
+using System.Collections.Generic;
 
 namespace IntermediarioPOO
 {
@@ -10,7 +11,7 @@ namespace IntermediarioPOO
         static void Main(string[] args)
         {
 
-
+            Aula03();
 
 
 
@@ -94,37 +95,79 @@ namespace IntermediarioPOO
         {
             //Post and Comments exercicio 02
 
+            Comment c1 = new Comment("Have a nice trip");
+            Comment c2 = new Comment("Wow that´s, awesome!");
+            PostUdemy p1 = new PostUdemy(
+                DateTime.Parse("21/06/2018 13:05:44"),
+                "Traveling to new zealand",
+                "I´m going to visit this wonderful country",
+                12);
+            p1.addComment(c1);
+            p1.addComment(c2);
 
-            Post post;
-            Comment comment;
+            Comment c3 = new Comment("Good night");
+            Comment c4 = new Comment("May the dorce be with you");
+            PostUdemy p2 = new PostUdemy(
+                DateTime.Parse("28/07/2018 23:14:41"),
+                "Good nisht guys",
+                "See you tmorrow",
+                12);
+            p2.addComment(c3);
+            p2.addComment(c4);
 
-            //Post
-            Console.Write("Digite o titulo do comentario:");
-            string title = Console.ReadLine();
-            Console.Write("Likes: ");
-            int likes = Convert.ToInt32(Console.ReadLine());
-
-            //Falta o data time 
-
-            Console.WriteLine(" -- Digite o Corpo do texto --");
-            Console.WriteLine();
-            string content = Console.ReadLine();
-
-            post = new Post();
-
-            Console.Write("Quantos comentarios vc quer fazer ao post acima ? ");
-            int n = Convert.ToInt32(Console.ReadLine());
-
-            for (int p = 1; p <= n; p++) 
-            { 
-               
-            }
+            Console.WriteLine(p1);
+            Console.WriteLine(p2);
 
 
+            /*
+             //Post and Comments exercicio 02, FEITA INTEIRAMENTE POR MIM
 
 
+             Post post;
+             Comment comment;
 
+             //Post
+             Console.Write("Moment (DD/MM/YY) HH:mm:ss ");
+             DateTime data = DateTime.Parse(Console.ReadLine());
+             Console.Write("Digite o titulo do comentario: ");
+             string title = Console.ReadLine();
+             Console.WriteLine(" -- Digite o Corpo do texto --");
+             Console.WriteLine();
+             string content = Console.ReadLine();
+             Console.WriteLine("-------------------------------");
+             Console.Write("Likes: ");
+             int likes = Convert.ToInt32(Console.ReadLine());
 
+             post = new Post(data, title,content,likes);
+
+             Console.Write("Quantos comentarios vc quer fazer ao post acima ? ");
+             int n = Convert.ToInt32(Console.ReadLine());
+
+             for (int p = 1; p <= n; p++) 
+             {
+                 Console.WriteLine();
+                 Console.WriteLine("Caixa de comentario");
+                 Console.WriteLine();
+                 string comentario = Console.ReadLine();
+                 comment = new Comment(comentario);
+                 post.addComment(comment);             
+             }
+
+             Console.WriteLine();
+             Console.WriteLine($" -----{post.Title}-------");
+             Console.WriteLine("--------------------------");
+             Console.WriteLine($"{post.Likes} Likes - {post.Moment}");
+             Console.WriteLine("---------------------------");
+             Console.WriteLine(post.Content);
+             Console.WriteLine("---------------------------");
+             Console.WriteLine();
+
+             foreach (Comment obj in post.Comments) 
+             {
+                 Console.WriteLine("Comments");
+                 Console.WriteLine(obj.Text);
+                 Console.WriteLine();
+             } */
 
         }
     }
