@@ -13,12 +13,8 @@ namespace IntermediarioPOO
         static void Main(string[] args)
         {
 
-            Aula04();
-
-
-
         }
-        public static void Aula01()
+        public static void AulaApresentacao()
         {
             //Por dentro da ENUM
 
@@ -39,7 +35,7 @@ namespace IntermediarioPOO
             Console.WriteLine();
             Console.WriteLine(os);
         }
-        public static void Aula02()
+        public static void Exercicio01()
         {
             //Composição de objetos exercicio 01
 
@@ -90,39 +86,43 @@ namespace IntermediarioPOO
             Console.WriteLine("Income for " + monthAndYear + ": " + worker.income(year, month).ToString("F2", CultureInfo.InvariantCulture));
 
         }
-        public static void Aula03()
+        public static void Exercicio02()
         {
-            //Post and Comments exercicio 02
 
-            Comment c1 = new Comment("Have a nice trip");
-            Comment c2 = new Comment("Wow that´s, awesome!");
-            PostUdemy p1 = new PostUdemy(
-                DateTime.Parse("21/06/2018 13:05:44"),
-                "Traveling to new zealand",
-                "I´m going to visit this wonderful country",
-                12);
-            p1.addComment(c1);
-            p1.addComment(c2);
-
-            Comment c3 = new Comment("Good night");
-            Comment c4 = new Comment("May the dorce be with you");
-            PostUdemy p2 = new PostUdemy(
-                DateTime.Parse("28/07/2018 23:14:41"),
-                "Good nisht guys",
-                "See you tmorrow",
-                12);
-            p2.addComment(c3);
-            p2.addComment(c4);
-
-            Console.WriteLine(p1);
-            Console.WriteLine(p2);
-
+          #region Post and Comments Com "Ajuda do professor"
 
             /*
-             //Post and Comments exercicio 02, FEITA INTEIRAMENTE POR MIM
+              Comment c1 = new Comment("Have a nice trip");
+              Comment c2 = new Comment("Wow that´s, awesome!");
+              PostUdemy p1 = new PostUdemy(
+                  DateTime.Parse("21/06/2018 13:05:44"),
+                  "Traveling to new zealand",
+                  "I´m going to visit this wonderful country",
+                  12);
+              p1.addComment(c1);
+              p1.addComment(c2);
+
+              Comment c3 = new Comment("Good night");
+              Comment c4 = new Comment("May the dorce be with you");
+              PostUdemy p2 = new PostUdemy(
+                  DateTime.Parse("28/07/2018 23:14:41"),
+                  "Good nisht guys",
+                  "See you tmorrow",
+                  12);
+              p2.addComment(c3);
+              p2.addComment(c4);
+
+              Console.WriteLine(p1);
+              Console.WriteLine(p2);*/
+
+            #endregion
+
+          #region Post and Comments exercicio 02, FEITA INTEIRAMENTE POR MIM
 
 
-             Post post;
+
+
+            Post post;
              Comment comment;
 
              //Post
@@ -153,12 +153,9 @@ namespace IntermediarioPOO
              }
 
              Console.WriteLine();
-             Console.WriteLine($" -----{post.Title}-------");
-             Console.WriteLine("--------------------------");
+             Console.WriteLine(post.Title);
              Console.WriteLine($"{post.Likes} Likes - {post.Moment}");
-             Console.WriteLine("---------------------------");
              Console.WriteLine(post.Content);
-             Console.WriteLine("---------------------------");
              Console.WriteLine();
 
              foreach (Comment obj in post.Comments) 
@@ -166,10 +163,11 @@ namespace IntermediarioPOO
                  Console.WriteLine("Comments");
                  Console.WriteLine(obj.Text);
                  Console.WriteLine();
-             } */
+             }
+#endregion
 
         }
-        public static void Aula04() 
+        public static void Exercicio03() 
         {
             Client client;
             Ordert order;
