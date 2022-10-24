@@ -3,6 +3,8 @@ using IntermediarioPOO.Entities.Enums;
 using System.Globalization;
 using System;
 using System.Collections.Generic;
+using IntermediarioPOO.Entities.ExeercicioEC;
+using IntermediarioPOO.Entities.ExeercicioEC.Enum;
 
 namespace IntermediarioPOO
 {
@@ -11,13 +13,11 @@ namespace IntermediarioPOO
         static void Main(string[] args)
         {
 
-            Aula03();
+            Aula04();
 
 
 
         }
-
-
         public static void Aula01()
         {
             //Por dentro da ENUM
@@ -90,7 +90,6 @@ namespace IntermediarioPOO
             Console.WriteLine("Income for " + monthAndYear + ": " + worker.income(year, month).ToString("F2", CultureInfo.InvariantCulture));
 
         }
-
         public static void Aula03()
         {
             //Post and Comments exercicio 02
@@ -168,6 +167,49 @@ namespace IntermediarioPOO
                  Console.WriteLine(obj.Text);
                  Console.WriteLine();
              } */
+
+        }
+        public static void Aula04() 
+        {
+            Client client;
+            Ordert order;
+            Productt prod;
+
+
+            Console.WriteLine("Enter cliente data: ");
+            Console.Write("Name: ");
+            string name = Console.ReadLine();
+            Console.Write("Email: ");
+            string email = Console.ReadLine();
+            Console.Write("Birth date (DD/MM/YYYY): ");
+            DateTime dateBirth = DateTime.Parse(Console.ReadLine());
+            Console.WriteLine("Enter order data:");
+            DateTime dateMoment = DateTime.Now;
+            Console.Write("Status: ");
+            OrderStatust OrderEnum = Enum.Parse<OrderStatust>(Console.ReadLine());
+            client = new Client(name, email, dateBirth);
+            order = new Ordert(dateMoment, OrderEnum, client);
+            Console.WriteLine();
+            Console.Write("Hoe many items to this order? ");
+            int n = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 1; i <= n; i++) 
+            {
+                Console.WriteLine();
+                Console.WriteLine($"Enter #{i} item data:");
+                Console.Write("Product name: ");
+                string nameProduct = Console.ReadLine();
+                Console.Write("Product price: ");
+                double priceProduct = Convert.ToDouble(Console.ReadLine());
+                Console.Write("Quantity: ");
+                int quantityProduct = Convert.ToInt32(Console.ReadLine());
+                prod = new Productt(nameProduct, priceProduct);
+                
+                OrderItem list = new OrderItem(quantityProduct, priceProduct, prod);
+                order.addItem(list);
+            }
+            Console.WriteLine();
+            Console.WriteLine(order);
 
         }
     }
