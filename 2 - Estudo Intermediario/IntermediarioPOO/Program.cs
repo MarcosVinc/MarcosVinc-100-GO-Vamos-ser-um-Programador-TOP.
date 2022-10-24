@@ -12,7 +12,7 @@ namespace IntermediarioPOO
     {
         static void Main(string[] args)
         {
-
+            Exercicio01();
         }
         public static void AulaApresentacao()
         {
