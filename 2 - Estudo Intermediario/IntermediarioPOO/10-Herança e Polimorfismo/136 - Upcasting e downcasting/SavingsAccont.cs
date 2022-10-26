@@ -1,6 +1,6 @@
 ﻿namespace IntermediarioPOO._10_Herança_e_Polimorfismo._136___Upcasting_e_downcasting
 {
-    class SavingsAccont : Account
+     class SavingsAccont : Account
 
     {
         public double InterestRate { get;  private set; }
@@ -16,6 +16,12 @@
         {
             Balance += Balance * InterestRate;
           
+        }
+        public  sealed override void Withdraw(double amount)
+        {
+            base.Withdraw(amount);
+            Balance -= 2.0;
+          //  Balance -= amount;
         }
     }
 }

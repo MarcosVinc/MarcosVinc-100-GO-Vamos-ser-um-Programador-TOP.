@@ -14,10 +14,13 @@ namespace IntermediarioPOO
     class Program
     {
         static void Main(string[] args)
-        {;
+        {
+
+
 
 
         }
+        #region Enumeraçãoes e Composição
         public static void AulaApresentacao()
         {
             //Por dentro da ENUM
@@ -214,6 +217,9 @@ namespace IntermediarioPOO
             Console.WriteLine(order);
 
         }
+        #endregion
+
+        #region Herança e Polimorfismo
 
         public static void UpcastingEDownCasting() 
         {
@@ -249,5 +255,31 @@ namespace IntermediarioPOO
             }
 
         }
+        public static void SobreposicaoOuSobrescrita() 
+        {
+            Account acc1 = new Account(1001, "Alex", 500);
+            Account acc2 = new SavingsAccont(1002, "Anna", 500.0, 0.01);
+
+            acc1.Withdraw(10.0);
+            acc2.Withdraw(10.0);
+            Console.WriteLine("ACC1:" + acc1.Balance + ",  ACC2: " + acc2.Balance);
+        }
+        public static void ClassesEMetodosSelados()
+        {
+
+            //            Pra quê?
+            //• Segurança: dependendo das regras do negócio, às vezes é desejável
+            //garantir que uma classe não seja herdada, ou que um método não
+            //seja sobreposto.
+            //• Geralmente convém selar métodos sobrepostos, pois sobreposições múltiplas
+            //podem ser uma porta de entrada para inconsistências
+            //• Performance: atributos de tipo de uma classe selada são analisados
+            //de forma mais rápida em tempo de execução.
+            //• Exemplo clássico: string
+
+
+        }
+
+        #endregion
     }
 }
