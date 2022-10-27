@@ -8,6 +8,7 @@ using IntermediarioPOO.Entities.ExeercicioEC.Enum;
 using IntermediarioPOO._10_Herança_e_Polimorfismo;
 using IntermediarioPOO._10_Herança_e_Polimorfismo._135___Herença;
 using IntermediarioPOO._10_Herança_e_Polimorfismo._136___Upcasting_e_downcasting;
+using IntermediarioPOO._10_Herança_e_Polimorfismo._140__a_142___Exercicios._140;
 
 namespace IntermediarioPOO
 {
@@ -15,9 +16,7 @@ namespace IntermediarioPOO
     {
         static void Main(string[] args)
         {
-
-
-
+            
 
         }
         #region Enumeraçãoes e Composição
@@ -277,6 +276,50 @@ namespace IntermediarioPOO
             //de forma mais rápida em tempo de execução.
             //• Exemplo clássico: string
 
+
+        }
+
+        public static void Exercicios() 
+        {
+            List<Employee> list = new List<Employee>();
+            string name;
+            int hours;
+            double valueperhours;
+
+
+            Console.Write("Quantos funcionarios você quer adicionar a empresa: ");
+            int n = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 1; i <= n; i++)
+            {
+                Console.WriteLine();
+                Console.WriteLine($"Employee #{i} data: ");
+                Console.Write("Outsourced (y/n) ?");
+                string esc = Console.ReadLine();
+                Console.Write("Name: ");
+                name = Console.ReadLine();
+                Console.Write("Hours: ");
+                hours = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Valur per Hours: ");
+                valueperhours = Convert.ToDouble(Console.ReadLine());
+
+                if (esc.ToLower() == "s" || esc.ToLower() == "y")
+                {
+                    Console.Write("Additional charge: ");
+                    double add = Convert.ToDouble(Console.ReadLine());
+                    list.Add(new OutsourcedEmployee(name, hours, valueperhours, add));
+                }
+                else
+                {
+                    list.Add(new Employee(name, hours, valueperhours));
+                }
+            }
+            Console.WriteLine();
+            Console.WriteLine("PAYMENTS: ");
+            foreach (Employee emp in list)
+            {
+                Console.WriteLine($"{emp.Name} - $: {emp.payment().ToString("F2", CultureInfo.InvariantCulture)}");
+            }
 
         }
 
