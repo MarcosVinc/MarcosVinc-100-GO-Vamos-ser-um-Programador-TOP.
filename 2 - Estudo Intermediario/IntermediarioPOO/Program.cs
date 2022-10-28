@@ -9,6 +9,7 @@ using IntermediarioPOO._10_Herança_e_Polimorfismo;
 using IntermediarioPOO._10_Herança_e_Polimorfismo._135___Herença;
 using IntermediarioPOO._10_Herança_e_Polimorfismo._136___Upcasting_e_downcasting;
 using IntermediarioPOO._10_Herança_e_Polimorfismo._140__a_142___Exercicios._140;
+using IntermediarioPOO._10_Herança_e_Polimorfismo._140__a_142___Exercicios._142;
 
 namespace IntermediarioPOO
 {
@@ -16,7 +17,6 @@ namespace IntermediarioPOO
     {
         static void Main(string[] args)
         {
-            
 
         }
         #region Enumeraçãoes e Composição
@@ -279,7 +279,7 @@ namespace IntermediarioPOO
 
         }
 
-        public static void Exercicios() 
+        public static void Exercicio140() 
         {
             List<Employee> list = new List<Employee>();
             string name;
@@ -319,6 +319,51 @@ namespace IntermediarioPOO
             foreach (Employee emp in list)
             {
                 Console.WriteLine($"{emp.Name} - $: {emp.payment().ToString("F2", CultureInfo.InvariantCulture)}");
+            }
+
+        }
+        public static void Exercicio142() 
+        {
+            List<Product> listProd = new List<Product>();
+
+            Console.Write("Enter the number of products: ");
+            int n = Convert.ToInt32(Console.ReadLine());
+            for (int i = 1; i <= n; i++)
+            {
+                //
+                Console.WriteLine();
+                Console.WriteLine($"Product #{i} data: ");
+                Console.Write("Common, used or imported (c/u/i)? ");
+                char esc = Convert.ToChar(Console.ReadLine());
+                Console.Write("Name: ");
+                string nome = Console.ReadLine();
+                Console.Write("Price: ");
+                double preço = Convert.ToDouble(Console.ReadLine());
+                //
+
+                if (esc == 'c')
+                {
+                    listProd.Add(new Product(nome, preço));
+                }
+                else if (esc == 'u')
+                {
+                    Console.Write("Manufacture date (DD/MM/YYYY): ");
+                    DateTime data = DateTime.Parse(Console.ReadLine());
+                    listProd.Add(new UsedProduct(nome, preço, data));
+                }
+                else if (esc == 'i')
+                {
+                    Console.Write("Customs fee: ");
+                    double fee = Convert.ToDouble(Console.ReadLine());
+                    listProd.Add(new ImportedProduct(nome, preço, fee));
+                }
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("PRICE TAGS: ");
+            foreach (Product obj in listProd)
+            {
+                Console.WriteLine($"{obj.priceTag()}");
             }
 
         }
