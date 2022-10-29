@@ -10,6 +10,10 @@ using IntermediarioPOO._10_Herança_e_Polimorfismo._135___Herença;
 using IntermediarioPOO._10_Herança_e_Polimorfismo._136___Upcasting_e_downcasting;
 using IntermediarioPOO._10_Herança_e_Polimorfismo._140__a_142___Exercicios._140;
 using IntermediarioPOO._10_Herança_e_Polimorfismo._140__a_142___Exercicios._142;
+using IntermediarioPOO._10_Herança_e_Polimorfismo._143_a_144___Classes_e_Metodos_Abstratos.Exercicios_Abstrato;
+using IntermediarioPOO._10_Herança_e_Polimorfismo._143_a_144___Classes_e_Metodos_Abstratos.Exercicios_Abstrato.Entities;
+using IntermediarioPOO._10_Herança_e_Polimorfismo._143_a_146___Classes_e_Metodos_Abstratos._146____Exercicio_Abastrato;
+using IntermediarioPOO._10_Herança_e_Polimorfismo._143_a_146___Classes_e_Metodos_Abstratos._146___Exercicio.Entities;
 
 namespace IntermediarioPOO
 {
@@ -17,6 +21,8 @@ namespace IntermediarioPOO
     {
         static void Main(string[] args)
         {
+
+
 
         }
         #region Enumeraçãoes e Composição
@@ -367,6 +373,106 @@ namespace IntermediarioPOO
             }
 
         }
+        public static void Exercicio145() 
+        {
+            List<Shape> list = new List<Shape>();
+            Console.Write("Enter the number of shapes: ");
+            int n = Convert.ToInt32(Console.ReadLine());
+
+            for (int j = 1; j <= n; j++)
+            {
+                Console.WriteLine();
+                Console.WriteLine("Shape #" + j + " data: ");
+                Console.Write("Rectangle of Circle (r/c)? ");
+                char rc = Convert.ToChar(Console.ReadLine());
+                Console.Write("Color (Black/Blue/Red): ");
+                Color color = Enum.Parse<Color>(Console.ReadLine());
+                if (rc == 'r' || rc == 'R')
+                {
+                    Console.Write("Width: ");
+                    double widht = Convert.ToDouble(Console.ReadLine());
+                    Console.Write("Height: ");
+                    double height = Convert.ToDouble(Console.ReadLine());
+                    list.Add(new Rectangle(color, widht, height));
+                }
+                else if (rc == 'c' || rc == 'C')
+                {
+                    Console.Write("Radius: ");
+                    double radius = Convert.ToDouble(Console.ReadLine());
+                    list.Add(new Circle(color, radius));
+
+                }
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("SHAPE AREAS: ");
+            foreach (Shape shape in list)
+            {
+                Console.WriteLine(shape.area().ToString("f2", CultureInfo.InvariantCulture));
+            }
+
+        }
+        public static void Exercicio146() 
+        {
+            List<Contribuintes> list = new List<Contribuintes>();
+
+
+            Console.Write("Enter the number of tax payers: ");
+            int n = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 1; i <= n; i++)
+            {
+                Console.WriteLine();
+                Console.WriteLine($"Tax payer #{i} data:");
+                Console.Write("Individual or company (i/c)? ");
+                char indComp = Convert.ToChar(Console.ReadLine());
+                if (indComp == 'i' || indComp == 'I')
+                {
+                    Console.Write("Name: ");
+                    string nome = Console.ReadLine();
+                    Console.Write("Anual income: ");
+                    double ganhoAnual = Convert.ToDouble(Console.ReadLine(), CultureInfo.InvariantCulture);
+                    Console.Write("Health expenditures: ");
+                    double gastoMedico = Convert.ToDouble(Console.ReadLine(), CultureInfo.InvariantCulture);
+                    list.Add(new Individual(nome, ganhoAnual, gastoMedico));
+                }
+                else if (indComp == 'c' || indComp == 'C')
+                {
+                    Console.Write("Name: ");
+                    string nome = Console.ReadLine();
+                    Console.Write("Anual income: ");
+                    double ganhoAnual = Convert.ToDouble(Console.ReadLine(), CultureInfo.InvariantCulture);
+                    Console.Write("Number of employees: ");
+                    int nEmpregados = Convert.ToInt32(Console.ReadLine());
+                    list.Add(new Empresa(nome, ganhoAnual, nEmpregados));
+
+                }
+                else
+                {
+                    Console.WriteLine("Invalid value");
+                }
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("TAXES PAID:");
+            double sum = 0;
+
+            foreach (Contribuintes obj in list)
+            {
+                Console.WriteLine($"{obj.Nome}: $ {obj.Taxa().ToString("f2", CultureInfo.InvariantCulture)}");
+            }
+
+            foreach (Contribuintes obj in list)
+            {
+
+                sum += obj.Taxa();
+            }
+            Console.WriteLine();
+            Console.Write($"TOTAL TAXES: {sum.ToString("f2", CultureInfo.InvariantCulture)}");
+
+
+        }
+
 
         #endregion
     }
