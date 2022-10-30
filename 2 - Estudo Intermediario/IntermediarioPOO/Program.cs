@@ -14,6 +14,10 @@ using IntermediarioPOO._10_Herança_e_Polimorfismo._143_a_144___Classes_e_Metodo
 using IntermediarioPOO._10_Herança_e_Polimorfismo._143_a_144___Classes_e_Metodos_Abstratos.Exercicios_Abstrato.Entities;
 using IntermediarioPOO._10_Herança_e_Polimorfismo._143_a_146___Classes_e_Metodos_Abstratos._146____Exercicio_Abastrato;
 using IntermediarioPOO._10_Herança_e_Polimorfismo._143_a_146___Classes_e_Metodos_Abstratos._146___Exercicio.Entities;
+using IntermediarioPOO._11__Tratamento_de_Exceções;
+using IntermediarioPOO._11__Tratamento_de_Exceções._152.Exeptions;
+using IntermediarioPOO._11__Tratamento_de_Exceções._155.Entities;
+using IntermediarioPOO._11__Tratamento_de_Exceções._155.Exceptions;
 
 namespace IntermediarioPOO
 {
@@ -21,10 +25,37 @@ namespace IntermediarioPOO
     {
         static void Main(string[] args)
         {
+            Account155 accont;
 
+            try
+            {
+                Console.WriteLine("Enter account data");
+                Console.Write("Number: ");
+                int number = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Holder: ");
+                string holder = Console.ReadLine();
+                Console.Write("Initial balance: ");
+                double balanceInitial = Convert.ToDouble(Console.ReadLine(), CultureInfo.InvariantCulture);
+                Console.Write("Withdraw limit: ");
+                double withdrar = Convert.ToDouble(Console.ReadLine(), CultureInfo.InvariantCulture);
+                accont = new Account155(number, holder, balanceInitial, withdrar);
 
+                Console.WriteLine();
+                Console.Write("Enter amount for withdraw: ");
+                double saque = Convert.ToDouble(Console.ReadLine(), CultureInfo.InvariantCulture);
+                accont.ErrorSniper(saque);
+                accont.withdraw(saque);
 
+                Console.Write("New balance: "+accont.Balance.ToString("F2", CultureInfo.InvariantCulture));
+            }
+            catch (DomainExceptionAccont e) 
+            {
+                Console.WriteLine("Withdraw error: " + e.Message);
+            }
+            
+            
         }
+        //
         #region Enumeraçãoes e Composição
         public static void AulaApresentacao()
         {
@@ -223,7 +254,7 @@ namespace IntermediarioPOO
 
         }
         #endregion
-
+        //
         #region Herança e Polimorfismo
 
         public static void UpcastingEDownCasting() 
@@ -284,7 +315,6 @@ namespace IntermediarioPOO
 
 
         }
-
         public static void Exercicio140() 
         {
             List<Employee> list = new List<Employee>();
@@ -473,6 +503,62 @@ namespace IntermediarioPOO
 
         }
 
+        #endregion
+        //
+        #region Tratamento de Exceçoes
+        public static void Aula150() 
+        {
+            try
+            {
+                int n1 = Convert.ToInt32(Console.ReadLine());
+                int n2 = Convert.ToInt32(Console.ReadLine());
+                int result = n1 / n2;
+                Console.WriteLine(result);
+            }
+            catch (DivideByZeroException)
+            {
+                Console.WriteLine("Division by zero is not allowed");
+            }
+            catch (FormatException e)
+            {
+                Console.WriteLine("Format error! " + e.Message);
+            }
+        }
+        public static void Aula152A154() 
+        {
+            Reservation reservation;
+            try
+            {
+                Console.Write("Room Number: ");
+                int room = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Check-in date (dd/MM/yyy): ");
+                DateTime chekeIn = DateTime.Parse(Console.ReadLine());
+                Console.Write("Check-out date (dd/MM/yyy): ");
+                DateTime chekeOut = DateTime.Parse(Console.ReadLine());
+                reservation = new Reservation(room, chekeIn, chekeOut);
+                Console.WriteLine("Reservation" + reservation);
+
+                Console.WriteLine();
+                Console.WriteLine("Enter data to update the reservartion:");
+                Console.Write("Check-in date (dd/MM/yyyy): ");
+                chekeIn = DateTime.Parse(Console.ReadLine());
+                Console.Write("Check-out date (dd/MM/yyyy): ");
+                chekeOut = DateTime.Parse(Console.ReadLine());
+                Console.WriteLine();
+
+                reservation.UpdateDates(chekeIn, chekeOut);
+                Console.WriteLine("Reservation" + reservation);
+            }
+            catch (DomainException e)
+            {
+                Console.WriteLine("Erro na reserva: " + e.Message);
+            }
+            catch (FormatException e)
+            {
+                Console.WriteLine("Formato Invalido" + e.Message);
+            }
+
+        }
 
         #endregion
     }
