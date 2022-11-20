@@ -1,0 +1,14 @@
+C:\Users\Marcos Vinicius\source\repos\C# COMPLETO Programação Orientada a Objetos + Projetos\3 - Estudo Avançado\AvancadoPOO\bin\Debug\netcoreapp3.1\AvancadoPOO.exe
+C:\Users\Marcos Vinicius\source\repos\C# COMPLETO Programação Orientada a Objetos + Projetos\3 - Estudo Avançado\AvancadoPOO\bin\Debug\netcoreapp3.1\AvancadoPOO.deps.json
+C:\Users\Marcos Vinicius\source\repos\C# COMPLETO Programação Orientada a Objetos + Projetos\3 - Estudo Avançado\AvancadoPOO\bin\Debug\netcoreapp3.1\AvancadoPOO.runtimeconfig.json
+C:\Users\Marcos Vinicius\source\repos\C# COMPLETO Programação Orientada a Objetos + Projetos\3 - Estudo Avançado\AvancadoPOO\bin\Debug\netcoreapp3.1\AvancadoPOO.runtimeconfig.dev.json
+C:\Users\Marcos Vinicius\source\repos\C# COMPLETO Programação Orientada a Objetos + Projetos\3 - Estudo Avançado\AvancadoPOO\bin\Debug\netcoreapp3.1\AvancadoPOO.dll
+C:\Users\Marcos Vinicius\source\repos\C# COMPLETO Programação Orientada a Objetos + Projetos\3 - Estudo Avançado\AvancadoPOO\bin\Debug\netcoreapp3.1\AvancadoPOO.pdb
+C:\Users\Marcos Vinicius\source\repos\C# COMPLETO Programação Orientada a Objetos + Projetos\3 - Estudo Avançado\AvancadoPOO\obj\Debug\netcoreapp3.1\AvancadoPOO.csproj.AssemblyReference.cache
+C:\Users\Marcos Vinicius\source\repos\C# COMPLETO Programação Orientada a Objetos + Projetos\3 - Estudo Avançado\AvancadoPOO\obj\Debug\netcoreapp3.1\AvancadoPOO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Marcos Vinicius\source\repos\C# COMPLETO Programação Orientada a Objetos + Projetos\3 - Estudo Avançado\AvancadoPOO\obj\Debug\netcoreapp3.1\AvancadoPOO.AssemblyInfoInputs.cache
+C:\Users\Marcos Vinicius\source\repos\C# COMPLETO Programação Orientada a Objetos + Projetos\3 - Estudo Avançado\AvancadoPOO\obj\Debug\netcoreapp3.1\AvancadoPOO.AssemblyInfo.cs
+C:\Users\Marcos Vinicius\source\repos\C# COMPLETO Programação Orientada a Objetos + Projetos\3 - Estudo Avançado\AvancadoPOO\obj\Debug\netcoreapp3.1\AvancadoPOO.csproj.CoreCompileInputs.cache
+C:\Users\Marcos Vinicius\source\repos\C# COMPLETO Programação Orientada a Objetos + Projetos\3 - Estudo Avançado\AvancadoPOO\obj\Debug\netcoreapp3.1\AvancadoPOO.dll
+C:\Users\Marcos Vinicius\source\repos\C# COMPLETO Programação Orientada a Objetos + Projetos\3 - Estudo Avançado\AvancadoPOO\obj\Debug\netcoreapp3.1\AvancadoPOO.pdb
+C:\Users\Marcos Vinicius\source\repos\C# COMPLETO Programação Orientada a Objetos + Projetos\3 - Estudo Avançado\AvancadoPOO\obj\Debug\netcoreapp3.1\AvancadoPOO.genruntimeconfig.cache

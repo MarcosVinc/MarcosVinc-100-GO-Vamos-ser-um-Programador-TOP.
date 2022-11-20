@@ -25,34 +25,6 @@ namespace IntermediarioPOO
     {
         static void Main(string[] args)
         {
-            Account155 accont;
-
-            try
-            {
-                Console.WriteLine("Enter account data");
-                Console.Write("Number: ");
-                int number = Convert.ToInt32(Console.ReadLine());
-                Console.Write("Holder: ");
-                string holder = Console.ReadLine();
-                Console.Write("Initial balance: ");
-                double balanceInitial = Convert.ToDouble(Console.ReadLine(), CultureInfo.InvariantCulture);
-                Console.Write("Withdraw limit: ");
-                double withdrar = Convert.ToDouble(Console.ReadLine(), CultureInfo.InvariantCulture);
-                accont = new Account155(number, holder, balanceInitial, withdrar);
-
-                Console.WriteLine();
-                Console.Write("Enter amount for withdraw: ");
-                double saque = Convert.ToDouble(Console.ReadLine(), CultureInfo.InvariantCulture);
-                accont.ErrorSniper(saque);
-                accont.withdraw(saque);
-
-                Console.Write("New balance: "+accont.Balance.ToString("F2", CultureInfo.InvariantCulture));
-            }
-            catch (DomainExceptionAccont e) 
-            {
-                Console.WriteLine("Withdraw error: " + e.Message);
-            }
-            
             
         }
         //
@@ -559,7 +531,41 @@ namespace IntermediarioPOO
             }
 
         }
+        public static void Aula155() 
+        {
+            Account155 accont;
+
+            try
+            {
+                Console.WriteLine("Enter account data");
+                Console.Write("Number: ");
+                int number = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Holder: ");
+                string holder = Console.ReadLine();
+                Console.Write("Initial balance: ");
+                double balanceInitial = Convert.ToDouble(Console.ReadLine(), CultureInfo.InvariantCulture);
+                Console.Write("Withdraw limit: ");
+                double withdrar = Convert.ToDouble(Console.ReadLine(), CultureInfo.InvariantCulture);
+                accont = new Account155(number, holder, balanceInitial, withdrar);
+
+                Console.WriteLine();
+                Console.Write("Enter amount for withdraw: ");
+                double saque = Convert.ToDouble(Console.ReadLine(), CultureInfo.InvariantCulture);
+                accont.ErrorSniper(saque);
+                accont.withdraw(saque);
+
+                Console.Write("New balance: " + accont.Balance.ToString("F2", CultureInfo.InvariantCulture));
+            }
+            catch (DomainExceptionAccont e)
+            {
+                Console.WriteLine("Withdraw error: " + e.Message);
+            }
+
+
+        }
 
         #endregion
+        //
+
     }
 }
