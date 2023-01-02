@@ -7,18 +7,19 @@ namespace AvancadoPOO._14___Interfaces.Service
 {
     class RentalService
     {
-        public double PricePerHour { get;  private set; }
+        public double PricePerHour { get; private set; }
         public double PricePerDay { get; private set; }
 
-        private BrazilTax _brazilTax = new BrazilTax();
+        private ITaxService _taxService;
 
-        public RentalService(double pricePerHour, double pricePerDay)
+        public RentalService(double pricePerHour, double pricePerDay, ITaxService taxService)
         {
             PricePerHour = pricePerHour;
             PricePerDay = pricePerDay;
+            _taxService = taxService;
         }
 
-        public void ProcessInvoice(CarRental carRental) 
+        public void ProcessInvoice(CarRental carRental)
         {
             TimeSpan duration = carRental.Finish.Subtract(carRental.Start);
             double basicPayment = 0;
@@ -27,14 +28,14 @@ namespace AvancadoPOO._14___Interfaces.Service
             {
                 basicPayment = PricePerHour * Math.Ceiling(duration.TotalHours);
             }
-            else 
+            else
             {
                 basicPayment = PricePerDay * Math.Ceiling(duration.TotalDays);
+
+                double tax = _taxService.Tax(basicPayment);
+
+                carRental.Invoice = new Invoice(basicPayment, tax);
             }
-
-            double tax = _brazilTax.Tax(basicPayment);
-
-            carRental.Invoice = new Invoice(basicPayment, tax);
         }
     }
 }

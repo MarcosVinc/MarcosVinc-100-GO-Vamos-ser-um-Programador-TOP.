@@ -4,8 +4,9 @@ using System.Text;
 
 namespace AvancadoPOO._14___Interfaces.Service
 {
-    class BrazilTax
+    class BrazilTax : ITaxService
     {
+
         public double Tax(double amount) 
         {
             if (amount <= 100)
@@ -15,8 +16,7 @@ namespace AvancadoPOO._14___Interfaces.Service
             else 
             {
                 return amount * 0.15;
-            }
-        
+            }       
         }
     }
 }
