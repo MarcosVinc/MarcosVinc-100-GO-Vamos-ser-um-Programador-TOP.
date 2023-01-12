@@ -6,6 +6,7 @@ using Exercicio.Entities;
 using AvancadoPOO._14___Interfaces.Entities;
 using AvancadoPOO._14___Interfaces.Service;
 using Exercicio.Service;
+using Interfaces.Entities;
 
 namespace AvancadoPOO
 {
@@ -15,30 +16,8 @@ namespace AvancadoPOO
         {
             try 
             {
-                Contract myContract;
-                ContractService contractService;
 
-                Console.WriteLine("Enter contract data");
-                Console.Write("Number: ");
-                int contractNumber = Convert.ToInt32(Console.ReadLine());
-                Console.Write("Date (dd/MM/yyyy): ");
-                DateTime contractData = DateTime.ParseExact(Console.ReadLine(), "dd/MM/yyyy",CultureInfo.InvariantCulture);
-                Console.Write("Contract value: ");
-                double contractValue = Convert.ToDouble(Console.ReadLine(), CultureInfo.InvariantCulture);
-                Console.Write("Enter number of installments: ");
-                int numberInstallments = Convert.ToInt32(Console.ReadLine());
-
-                myContract = new Contract(contractNumber, contractData, contractValue);
-                contractService = new ContractService(new PaypalService());
-                contractService.ProcessContract(myContract, numberInstallments);
-
-                Console.WriteLine("");
-                Console.WriteLine("INSTALLMENTS: ");
-
-                foreach (Installment installment in myContract.Installments)
-                {
-                    Console.WriteLine(installment);
-                }
+                
 
 
             }
@@ -52,7 +31,7 @@ namespace AvancadoPOO
         }
         public static void Aula199() 
         {
-            string path = @"E:\teste";
+            string path = @"CAMINHO DA PASTA";
             try
             {
 
@@ -74,8 +53,8 @@ namespace AvancadoPOO
         }
         public static void Aula195() 
         {
-            string sourcePath = @"E:\teste\file1.txt";
-            string targetPath = @"E:\teste\file2.txt";
+            string sourcePath = @"CAMINHO DO ARQUIVO 1 ";
+            string targetPath = @"CAMINHO DO ARQUIVO 2";
 
             try
             {
@@ -134,6 +113,64 @@ namespace AvancadoPOO
 
 
         }
-    }
+        public static void AulaX() 
+        {
+            Contract myContract;
+            ContractService contractService;
+
+            Console.WriteLine("Enter contract data");
+            Console.Write("Number: ");
+            int contractNumber = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Date (dd/MM/yyyy): ");
+            DateTime contractData = DateTime.ParseExact(Console.ReadLine(), "dd/MM/yyyy", CultureInfo.InvariantCulture);
+            Console.Write("Contract value: ");
+            double contractValue = Convert.ToDouble(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.Write("Enter number of installments: ");
+            int numberInstallments = Convert.ToInt32(Console.ReadLine());
+
+            myContract = new Contract(contractNumber, contractData, contractValue);
+            contractService = new ContractService(new PaypalService());
+            contractService.ProcessContract(myContract, numberInstallments);
+
+            Console.WriteLine("");
+            Console.WriteLine("INSTALLMENTS: ");
+
+            foreach (Installment installment in myContract.Installments)
+            {
+                Console.WriteLine(installment);
+            }
+
+        }
+        public static void Aula211IComparable()
+        {
+            string path = @"CAMINHO DO ARQUIVO";
+            try
+            {
+                using (StreamReader sr = File.OpenText(path))
+                {
+                    List<Employee> list = new List<Employee>();
+                    while (!sr.EndOfStream)
+                    {
+                        list.Add(new Employee(sr.ReadLine()));
+                    }
+                    list.Sort();
+                    foreach (Employee emp in list)
+                    {
+                        Console.WriteLine(emp);
+                    }
+                }
+
+
+
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Erro : " + e);
+
+
+
+            }
+        }
 }
  

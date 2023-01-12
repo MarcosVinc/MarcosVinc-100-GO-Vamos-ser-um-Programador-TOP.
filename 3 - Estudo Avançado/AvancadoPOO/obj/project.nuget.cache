@@ -1,10 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iwLWLElFk49L9RrkO5LGSHghUds+3Wn0kz+6lyCdMkG1aAM+PjPHGpwVH//SF+eCwY+r4V7YcQiItyaN5oaUzw==",
+  "dgSpecHash": "G6VOV8WpS3399WMIkoVLkufu12Ew5WAjwsW+pY6noM0oJOCUwxY6phpBnRHr+2vLDLNL2I1MtbBbMs0UcttwPA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Marcos Vinicius\\source\\repos\\C# COMPLETO Programação Orientada a Objetos + Projetos\\3 - Estudo Avançado\\AvancadoPOO\\AvancadoPOO.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Marcos Vinicius\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.32\\microsoft.netcore.app.host.win-x64.3.1.32.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }
