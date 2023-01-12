@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "KYx4zH6QRL+eKrDbyXa3b1gTkq5HwMsxL4wMCXPozTV5OzNjXJ1XMYg8nJvIjy4GT2TomVI5uMQYCGi3KJqfkw==",
+  "dgSpecHash": "CFTQebZySGi6cU7DbK+wA1txeQVOwpiryLxKaeVuZwnA7I76MYAzdEBhDQhNwk9qdgyE2JUT/+ALCw7IT826IA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Marcos Vinicius\\source\\repos\\C# COMPLETO Programação Orientada a Objetos + Projetos\\1 - Estudo Basico\\BasicoPOO\\BasicoPOO.csproj",
+  "projectFilePath": "C:\\Users\\Marcos Vinicius\\source\\repos\\C# COMPLETO Programação Orientada a Objetos + Projetos\\1 - Estudo Basico\\BasicoPOO.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Marcos Vinicius\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.21\\microsoft.netcore.app.host.win-x64.3.1.21.nupkg.sha512"
+    "C:\\Users\\Marcos Vinicius\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.32\\microsoft.netcore.app.host.win-x64.3.1.32.nupkg.sha512"
   ],
   "logs": []
 }
