@@ -7,6 +7,7 @@ using AvancadoPOO._14___Interfaces.Entities;
 using AvancadoPOO._14___Interfaces.Service;
 using Exercicio.Service;
 using Interfaces.Entities;
+using Generics_Set_Dictionary;
 
 namespace AvancadoPOO
 {
@@ -14,22 +15,23 @@ namespace AvancadoPOO
     {
         static void Main(string[] args)
         {
-            try 
+            try
             {
 
-                
+
 
 
             }
-            catch (Exception e) 
+            catch (Exception e)
             {
                 Console.WriteLine("Erro : " + e);
-            
+
             }
-     
+
 
         }
-        public static void Aula199() 
+       // public static void X() { }
+        public static void Aula199()
         {
             string path = @"CAMINHO DA PASTA";
             try
@@ -51,7 +53,7 @@ namespace AvancadoPOO
 
 
         }
-        public static void Aula195() 
+        public static void Aula195()
         {
             string sourcePath = @"CAMINHO DO ARQUIVO 1 ";
             string targetPath = @"CAMINHO DO ARQUIVO 2";
@@ -74,7 +76,7 @@ namespace AvancadoPOO
             }
 
         }
-        public static void Aula200() 
+        public static void Aula200()
         {
             string path = @"E:\teste\file1.txt";
             Console.WriteLine("GetDirectoryName: " + Path.GetDirectoryName(path));
@@ -87,7 +89,7 @@ namespace AvancadoPOO
             Console.WriteLine("GetTempPath: " + Path.GetTempPath());
 
         }
-        public static void Aula205() 
+        public static void Aula205()
         {
             //SOLUÇÃO SEM INTERFACE
 
@@ -113,7 +115,7 @@ namespace AvancadoPOO
 
 
         }
-        public static void AulaX() 
+        public static void AulaX()
         {
             Contract myContract;
             ContractService contractService;
@@ -172,5 +174,25 @@ namespace AvancadoPOO
 
             }
         }
+        public static void Aula213() 
+        {
+            PrintService printSevice = new PrintService();
+            Console.Write("How many values? ");
+            int n = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 0; i < n; i++)
+            {
+                int x = Convert.ToInt32(Console.ReadLine());
+                printSevice.addValue(x);
+            }
+            printSevice.Print();
+            Console.WriteLine("First: " + printSevice.First());
+
+        }
+
+
+
+    }
 }
+
  
